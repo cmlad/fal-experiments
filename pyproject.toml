@@ -1,0 +1,16 @@
+[project]
+name = "fal-experiments"
+version = "0.0.1"
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fal @ git+https://github.com/fal-ai/fal@ruslan/bundle_paths#subdirectory=projects/fal",
+    "pydantic<2",
+]
+
+[tool.setuptools]
+packages = ["fal_handlers"]
+
+[tool.fal.apps]
+sdxl-t2i = {ref = "fal_handlers/sdxl_t2i/inference.py"}
