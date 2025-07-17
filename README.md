@@ -5,5 +5,5 @@ pip install -e .
 ```
 
 ```bash
-fal run fal_handlers/sdxl_t2i/inference.py
+fal run sdxl-t2i
 ```
