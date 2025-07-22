@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["fal_handlers"]
+packages = ["src"]
 
 [tool.fal.apps]
-sdxl-t2i = {ref = "fal_handlers/sdxl_t2i/inference.py"}
+sdxl-t2i = {ref = "src/fal_handlers/sdxl_t2i/inference.py"}

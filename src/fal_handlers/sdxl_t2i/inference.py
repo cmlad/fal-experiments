@@ -1,15 +1,13 @@
 import fal
 from fal.toolkit import Image
-from fal_handlers.sdxl_t2i.models import Input, Output
+from src.fal_handlers.sdxl_t2i.models import Input, Output
+from src.pipelines.sdxl import get_pipeline
 
 class SDXLT2I(fal.App):
     machine_type = "GPU"
     requirements = ["torch==2.7.0", "diffusers", "transformers"]
-    bundle_paths = ["src"]
-    context_dir = "../.."
 
     def setup(self):
-        from src.pipelines.sdxl import get_pipeline
 
         self.pipeline = get_pipeline()
 
